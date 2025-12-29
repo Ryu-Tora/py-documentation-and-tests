@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework_simplejwt",
     "rest_framework.authtoken",
     "drf_spectacular",
     "debug_toolbar",
@@ -63,8 +64,8 @@ REST_FRAMEWORK = {
        "rest_framework.throttling.UserRateThrottle"
     ],
     "DEFAULT_THROTTLE_RATES": {
-       "anon": "100/day",
-       "user": "1000/day"
+       "anon": "10/min",
+       "user": "30/min"
     }
 }
 
